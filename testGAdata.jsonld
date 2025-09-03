@@ -1,0 +1,64 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP108": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0108/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP108:body",
+      "@context": {
+        "references": {
+          "@id": "CIP108:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "referenceHash": {
+              "@id": "CIP108:referenceHash",
+              "@context": {
+                "hashDigest": "CIP108:hashDigest",
+                "hashAlgorithm": "CIP100:hashAlgorithm"
+              }
+            }
+          }
+        },
+        "title": "CIP108:title",
+        "abstract": "CIP108:abstract",
+        "motivation": "CIP108:motivation",
+        "rationale": "CIP108:rationale"
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "authors": [],
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "abstract": "This action informs the community about a recurring DRep Office Hours series focused on governance literacy, voting hygiene, and transparent rationale writing. No protocol parameters are changed and no treasury funds are requested.",
+    "motivation": "Many ADA holders and new DReps seek structured, recurring touchpoints to understand current governance cycles, how to evaluate proposals, and how to publish clear rationales. Publishing a calendar and learning objectives in an on-chain info action increases visibility and allows voters to reference a canonical source.",
+    "rationale": "An Info Action is appropriate because the intent is to notify, coordinate, and invite feedback without altering network rules. On-chain publication improves auditability and discoverability compared with off-chain posts alone, and allows DReps to signal expectations for evidence-led assessments.\nScope: Announce dates, topics, and contribution pathways for the next three governance cycles. This action does not request funds, does not modify parameters, and does not commit the network to any schedule changes.\nPlanned Timeline: Cycle 1 (Education basics), Cycle 2 (Rationale quality and conflicts logging), Cycle 3 (Post-vote reporting and impact tracking). Specific dates will be maintained at the linked calendar.\nSuccess Measures: Attendance numbers, published rationales per cycle, percentage of rationales citing verifiable sources, and post-session feedback scores.\nRisks & Mitigations: Low participation risk mitigated through early publication and cross-posting; misinterpretation risk mitigated by clearly stating the non-binding nature of this action and linking all materials.",
+    "references": [
+      {
+        "@type": "Other",
+        "label": "https://example.org/drep-curriculum",
+        "uri": "https://example.org/drep-calendar"
+      }
+    ],
+    "title": "DRep Office Hours and Governance Education Calendar"
+  }
+}
