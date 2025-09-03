@@ -1,0 +1,82 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP119": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0119/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP119:body",
+      "@context": {
+        "references": {
+          "@id": "CIP119:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Identity": "CIP119:IdentityReference",
+            "Link": "CIP119:LinkReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "referenceHash": {
+              "@id": "CIP119:referenceHash",
+              "@context": {
+                "hashDigest": "CIP119:hashDigest",
+                "hashAlgorithm": "CIP100:hashAlgorithm"
+              }
+            }
+          }
+        },
+        "paymentAddress": "CIP119:paymentAddress",
+        "givenName": "CIP119:givenName",
+        "image": {
+          "@id": "CIP119:image",
+          "@context": {
+            "ImageObject": "https://schema.org/ImageObject",
+            "contentUrl": "CIP119:contentUrl",
+            "sha256": "CIP119:sha256"
+          }
+        },
+        "objectives": "CIP119:objectives",
+        "motivations": "CIP119:motivations",
+        "qualifications": "CIP119:qualifications",
+        "doNotList": "CIP119:doNotList"
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "authors": [],
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "givenName": "DRepChain - Test",
+    "image": {
+      "@type": "ImageObject",
+      "contentUrl": "https://avatars.githubusercontent.com/u/221685441?v=4",
+      "sha256": "33e740cce86dbe35ca394cf975470e9cabc29b3604b902a98df383cb9be7c7ed"
+    },
+    "motivations": "We are motivated to become a DRep because we see a governance gap where too few representatives hold most of the delegating power while many registered DReps are quiet or inactive. That concentration narrows perspectives, slows rigorous review, and weakens accountability. We want to help rebalance this by showing up consistently, engaging voters in plain language, and giving smaller delegates a credible, responsive voice. Our aim is to widen scrutiny on proposals, document the reasoning behind every vote, and create simple feedback loops so delegators know their influence is real. By being present, transparent, and evidence led, we intend to reduce reliance on a handful of familiar names and make room for diverse expertise, including underrepresented regions and builders doing real work on the ground. Becoming a DRep is our commitment to strengthen legitimacy, increase participation, and ensure treasury decisions reflect the broader community rather than the loudest few.",
+    "objectives": "Fair governance, Fair representation.\nAdd whatever believes you may have as a DRep. This will be visible publicly and ada holders would assess to decide if they want to delegate to you or not.",
+    "paymentAddress": "addr_test1qpu3mugpu22sjcftjyur789km39569n2dhtaehgsz9mj7kqrak5jysp3cp2fgxk3367f8hmhq3dzmw9pufcsjt8u6wpq9qk7wr",
+    "qualifications": "Tech engineering\nEducation\nAdvocacy",
+    "references": [
+      {
+        "@type": "Link",
+        "label": "Twitter",
+        "uri": "https://x.com/drep_chain"
+      }
+    ]
+  }
+}
